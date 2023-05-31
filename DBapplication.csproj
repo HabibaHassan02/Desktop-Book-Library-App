@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC8232D5-B804-4766-8840-C88C50EAD01E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBapplication</RootNamespace>
+    <AssemblyName>DBapplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountReport.Designer.cs">
+      <DependentUpon>AccountReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book.Designer.cs">
+      <DependentUpon>Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="CreateEmpoyeeAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEmpoyeeAccount.Designer.cs">
+      <DependentUpon>CreateEmpoyeeAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerAccount.Designer.cs">
+      <DependentUpon>CustomerAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="EmployeeAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeAccount.Designer.cs">
+      <DependentUpon>EmployeeAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeFunctionalities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeFunctionalities.Designer.cs">
+      <DependentUpon>EmployeeFunctionalities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeViewOfCustomerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeViewOfCustomerAccount.Designer.cs">
+      <DependentUpon>EmployeeViewOfCustomerAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_createCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_createCustomer.Designer.cs">
+      <DependentUpon>Employee_createCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiveBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveBonus.Designer.cs">
+      <DependentUpon>GiveBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerAccount.Designer.cs">
+      <DependentUpon>ManagerAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerFunctionalities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerFunctionalities.Designer.cs">
+      <DependentUpon>ManagerFunctionalities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_assignSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_assignSalary.Designer.cs">
+      <DependentUpon>Manager_assignSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_changeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_changeStatus.Designer.cs">
+      <DependentUpon>Manager_changeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_register.Designer.cs">
+      <DependentUpon>Manager_register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberFunctionalities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberFunctionalities.Designer.cs">
+      <DependentUpon>MemberFunctionalities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReservationOrLending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationOrLending.Designer.cs">
+      <DependentUpon>ReservationOrLending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReserveOrLend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReserveOrLend.Designer.cs">
+      <DependentUpon>ReserveOrLend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBook.Designer.cs">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="ViewLending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLending.Designer.cs">
+      <DependentUpon>ViewLending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReservations.Designer.cs">
+      <DependentUpon>ViewReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSalary.Designer.cs">
+      <DependentUpon>ViewSalary.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountReport.resx">
+      <DependentUpon>AccountReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book.resx">
+      <DependentUpon>Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateEmpoyeeAccount.resx">
+      <DependentUpon>CreateEmpoyeeAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccount.resx">
+      <DependentUpon>CustomerAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeAccount.resx">
+      <DependentUpon>EmployeeAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeFunctionalities.resx">
+      <DependentUpon>EmployeeFunctionalities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeViewOfCustomerAccount.resx">
+      <DependentUpon>EmployeeViewOfCustomerAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_createCustomer.resx">
+      <DependentUpon>Employee_createCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiveBonus.resx">
+      <DependentUpon>GiveBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerAccount.resx">
+      <DependentUpon>ManagerAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerFunctionalities.resx">
+      <DependentUpon>ManagerFunctionalities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_assignSalary.resx">
+      <DependentUpon>Manager_assignSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_changeStatus.resx">
+      <DependentUpon>Manager_changeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_register.resx">
+      <DependentUpon>Manager_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberFunctionalities.resx">
+      <DependentUpon>MemberFunctionalities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationOrLending.resx">
+      <DependentUpon>ReservationOrLending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReserveOrLend.resx">
+      <DependentUpon>ReserveOrLend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBook.resx">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLending.resx">
+      <DependentUpon>ViewLending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReservations.resx">
+      <DependentUpon>ViewReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSalary.resx">
+      <DependentUpon>ViewSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
